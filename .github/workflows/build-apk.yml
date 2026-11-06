@@ -22,31 +22,27 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Accept Android SDK Licenses
-        run: |
-          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
-
       - name: Setup Gradle 8.9
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: "8.9"
 
-      - name: Build Debug & Release APK
+      - name: Build APK
         run: |
           gradle assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PolarSnap-APK
-          path: app/build/outputs/apk/**/*.apk
+          name: PolarSnap-v1.0.0
+          path: app/build/outputs/apk/debug/*.apk
 
-      - name: Create GitHub Release for Silent OTA
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/') || github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         with:
-          files: app/build/outputs/apk/**/*.apk
-          tag_name: v1.0.0
+          files: app/build/outputs/apk/debug/*.apk
+          tag_name: "v1.0.0"
           name: "PolarSnap v1.0.0 — Commercial Release"
           body: |
             ## PolarSnap — by Trandif (v1.0.0)

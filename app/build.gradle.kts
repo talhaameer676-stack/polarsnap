@@ -18,17 +18,6 @@ android {
 
         ndk {
             abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
-            ldLibs.add("-Wl,-z,max-page-size=16384")
-        }
-
-        externalNativeBuild {
-            cmake {
-                arguments += listOf(
-                    "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON",
-                    "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=16384",
-                    "-DCMAKE_EXE_LINKER_FLAGS=-Wl,-z,max-page-size=16384"
-                )
-            }
         }
     }
 
@@ -37,7 +26,7 @@ android {
             isEnable = true
             reset()
             include("arm64-v8a", "armeabi-v7a")
-            isUniversalApk = false
+            isUniversalApk = true
         }
     }
 
