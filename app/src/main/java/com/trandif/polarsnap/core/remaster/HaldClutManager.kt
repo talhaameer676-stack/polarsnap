@@ -1,10 +1,8 @@
 package com.trandif.polarsnap.core.remaster
 
 import com.trandif.polarsnap.domain.remaster.CapCutPreset
-import java.awt.image.BufferedImage
 import java.io.File
 import java.io.InputStream
-import javax.imageio.ImageIO
 
 /**
  * Abstraction for asset stream loading (supports Android AssetManager or standard ClassLoader/Filesystem).
@@ -26,6 +24,14 @@ class DefaultAssetStreamProvider(
         }
         return javaClass.classLoader?.getResourceAsStream(assetPath)
     }
+}
+
+/**
+ * Represents a 2D RGB image buffer for LUT transformations without platform AWT/Android dependencies.
+ */
+class PixelGrid(val width: Int, val height: Int, val pixels: IntArray = IntArray(width * height)) {
+    fun getRGB(x: Int, y: Int): Int = pixels[y * width + x]
+    fun setRGB(x: Int, y: Int, rgb: Int) { pixels[y * width + x] = rgb }
 }
 
 /**
@@ -101,15 +107,32 @@ class HaldClutManager(
     }
 
     /**
-     * Checks if a LUT file exists, is non-empty, and has exactly 512x512 resolution.
+     * Checks if a LUT file exists, is non-empty, and has exactly 512x512 resolution by parsing
+     * the PNG IHDR header (bytes 16-24). Works on all platforms with zero dependencies.
      */
     fun isLutFileValid(file: File): Boolean {
-        if (!file.exists() || !file.isFile || file.length() == 0L) {
+        if (!file.exists() || !file.isFile || file.length() < 24L) {
             return false
         }
         return try {
-            val img = ImageIO.read(file) ?: return false
-            img.width == EXPECTED_DIMENSION && img.height == EXPECTED_DIMENSION
+            file.inputStream().use { stream ->
+                val header = ByteArray(24)
+                val read = stream.read(header)
+                if (read < 24) return false
+                if (header[0] != 0x89.toByte() || header[1] != 0x50.toByte() ||
+                    header[2] != 0x4E.toByte() || header[3] != 0x47.toByte()) {
+                    return false
+                }
+                val width = ((header[16].toInt() and 0xFF) shl 24) or
+                            ((header[17].toInt() and 0xFF) shl 16) or
+                            ((header[18].toInt() and 0xFF) shl 8) or
+                            (header[19].toInt() and 0xFF)
+                val height = ((header[20].toInt() and 0xFF) shl 24) or
+                             ((header[21].toInt() and 0xFF) shl 16) or
+                             ((header[22].toInt() and 0xFF) shl 8) or
+                             (header[23].toInt() and 0xFF)
+                width == EXPECTED_DIMENSION && height == EXPECTED_DIMENSION
+            }
         } catch (_: Exception) {
             false
         }
@@ -117,26 +140,14 @@ class HaldClutManager(
 
     /**
      * Performs a 100% lossless bijective coordinate transformation from CapCut's 8x8 tiled 64^3 3D LUT
-     * into FFmpeg's Hald CLUT Level 8 standard scanline layout.
-     *
-     * Mathematical Coordinate Mapping:
-     * For each pixel (hx, hy) in the target 512x512 Hald CLUT:
-     * 1. index = hy * 512 + hx
-     * 2. R = index % 64
-     * 3. G = (index / 64) % 64
-     * 4. B = (index / 4096) % 64
-     * 5. tileCol = B % 8
-     * 6. tileRow = B / 8
-     * 7. cx = tileCol * 64 + R
-     * 8. cy = tileRow * 64 + G
-     * 9. HaldCLUT[hx, hy] = CapCutLUT[cx, cy]
+     * into FFmpeg's Hald CLUT Level 8 standard scanline layout using a pure PixelGrid buffer.
      */
-    fun convertCapCutTiledToHaldClut(sourceTiledImage: BufferedImage): BufferedImage {
-        require(sourceTiledImage.width == EXPECTED_DIMENSION && sourceTiledImage.height == EXPECTED_DIMENSION) {
-            "Source tiled CapCut LUT must be ${EXPECTED_DIMENSION}x${EXPECTED_DIMENSION}, got: ${sourceTiledImage.width}x${sourceTiledImage.height}"
+    fun convertCapCutTiledToHaldClut(source: PixelGrid): PixelGrid {
+        require(source.width == EXPECTED_DIMENSION && source.height == EXPECTED_DIMENSION) {
+            "Source tiled CapCut LUT must be ${EXPECTED_DIMENSION}x${EXPECTED_DIMENSION}, got: ${source.width}x${source.height}"
         }
 
-        val haldClutImage = BufferedImage(EXPECTED_DIMENSION, EXPECTED_DIMENSION, BufferedImage.TYPE_INT_RGB)
+        val haldClut = PixelGrid(EXPECTED_DIMENSION, EXPECTED_DIMENSION)
 
         for (hy in 0 until EXPECTED_DIMENSION) {
             for (hx in 0 until EXPECTED_DIMENSION) {
@@ -152,22 +163,10 @@ class HaldClutManager(
                 val cx = tileCol * TILE_SIZE + r
                 val cy = tileRow * TILE_SIZE + g
 
-                val rgb = sourceTiledImage.getRGB(cx, cy)
-                haldClutImage.setRGB(hx, hy, rgb)
+                haldClut.setRGB(hx, hy, source.getRGB(cx, cy))
             }
         }
 
-        return haldClutImage
-    }
-
-    /**
-     * Converts an on-disk CapCut tiled LUT file and saves the converted Hald CLUT to the destination.
-     */
-    fun convertAndSaveLut(sourceTiledFile: File, destinationHaldFile: File): File {
-        val srcImg = ImageIO.read(sourceTiledFile)
-            ?: throw IllegalArgumentException("Could not decode source image: ${sourceTiledFile.absolutePath}")
-        val converted = convertCapCutTiledToHaldClut(srcImg)
-        ImageIO.write(converted, "png", destinationHaldFile)
-        return destinationHaldFile
+        return haldClut
     }
 }

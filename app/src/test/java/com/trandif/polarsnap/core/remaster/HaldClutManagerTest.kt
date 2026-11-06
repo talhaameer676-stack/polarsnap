@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.io.TempDir
-import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
@@ -66,9 +65,7 @@ class HaldClutManagerTest {
         val manager = HaldClutManager(cacheDirectory = File("build/tmp/test_lut"))
 
         // Create a 512x512 CapCut 8x8 tiled identity texture
-        // tile_col = B % 8, tile_row = B / 8
-        // cx = tile_col * 64 + R, cy = tile_row * 64 + G
-        val tiledIdentity = BufferedImage(512, 512, BufferedImage.TYPE_INT_RGB)
+        val tiledIdentity = PixelGrid(512, 512)
         for (b in 0 until 64) {
             val tileCol = b % 8
             val tileRow = b / 8
@@ -93,10 +90,6 @@ class HaldClutManagerTest {
         assertEquals(512, haldClut.height)
 
         // Verify Hald CLUT scanline ordering
-        // index = hy * 512 + hx
-        // R = index % 64
-        // G = (index / 64) % 64
-        // B = (index / 4096) % 64
         for (sampleIdx in listOf(0, 1, 63, 64, 4095, 4096, 262143)) {
             val hx = sampleIdx % 512
             val hy = sampleIdx / 512
