@@ -113,28 +113,30 @@ class DownloadQueueManager(
 
                 val targetRes = when (resolutionLimit) {
                     ResolutionLimit.RES_4K -> TargetResolution.UHD_4K
-                    ResolutionLimit.RES_1440P -> TargetResolution.QHD_2K
-                    ResolutionLimit.RES_720P -> TargetResolution.HD_720P
-                    else -> TargetResolution.FHD_1080P
+                    ResolutionLimit.RES_1440P -> TargetResolution.RES_1440P
+                    ResolutionLimit.RES_720P -> TargetResolution.RES_720P
+                    else -> TargetResolution.RES_1080P
                 }
 
                 val remasterOut = File(cacheDir, "remastered_${finalFile.name}")
                 val remasterConfig = RemasterConfig(
-                    inputFile = finalFile,
-                    outputFile = remasterOut,
+                    enableSuperResolution = (resolutionLimit == ResolutionLimit.RES_4K),
                     targetResolution = targetRes,
-                    preset = preset,
-                    enableLanczosUpscaling = true,
-                    enableCasSharpening = true,
-                    enableVibrancePop = true
+                    enableSharpening = true,
+                    colorGradingPreset = preset,
+                    lutIntensity = 1.0f
                 )
 
-                val remasterResult = remasterPipeline.remaster(remasterConfig) { pct ->
+                val remasterResult = remasterPipeline.processMedia(
+                    sourceFile = finalFile.absolutePath,
+                    destinationFile = remasterOut.absolutePath,
+                    config = remasterConfig
+                ) { pct ->
                     task.progress = pct
                 }
 
-                remasterResult.onSuccess { remasteredFile ->
-                    finalFile = remasteredFile
+                remasterResult.onSuccess { remasteredPath ->
+                    finalFile = File(remasteredPath)
                 }
             }
 
