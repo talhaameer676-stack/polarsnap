@@ -1,0 +1,21 @@
+*.zip
+*.tar.gz
+*.7z
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+*.log
+drive2drive/
+tools/
+.agents/
+*.apk
+New folder/
+index.html
+
+voice_reader.html
+sanitize_ui.py
+

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <meta content="mobile_stack" name="shell-type"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { width: 100vw; margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    body { min-height: max(884px, 100dvh); }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f5faff",
+            "surface-dim": "#d5dbe0",
+            "surface-bright": "#f5faff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#eff4fa",
+            "surface-container": "#e9eef4",
+            "surface-container-high": "#e3e9ef",
+            "surface-container-highest": "#dee3e9",
+            "on-surface": "#161c21",
+            "on-surface-variant": "#3f484b",
+            "inverse-surface": "#2b3136",
+            "inverse-on-surface": "#ecf1f7",
+            "outline": "#6f797c",
+            "outline-variant": "#bec8cb",
+            "surface-tint": "#00687a",
+            "primary": "#004e5c",
+            "on-primary": "#ffffff",
+            "primary-container": "#00687a",
+            "on-primary-container": "#98e4f9",
+            "inverse-primary": "#86d2e6",
+            "secondary": "#465f88",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#b6d0ff",
+            "on-secondary-container": "#3f5881",
+            "tertiary": "#005147",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#006b5f",
+            "on-tertiary-container": "#6feed9",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#abedff",
+            "primary-fixed-dim": "#86d2e6",
+            "secondary-fixed": "#d6e3ff",
+            "secondary-fixed-dim": "#aec7f7",
+            "tertiary-fixed": "#79f7e3",
+            "tertiary-fixed-dim": "#59dbc7",
+            "background": "#f5faff",
+            "on-background": "#161c21",
+            "surface-variant": "#dee3e9"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px" },
+          spacing: { "space-xl": "2rem", "margin": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem" },
+          fontFamily: {
+            "label-md": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"],
+            "label-lg": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"],
+            "display-lg": ["Inter"], "title-md": ["Inter"], "title-lg": ["Inter"], "headline-md": ["Inter"],
+            "headline-lg": ["Inter"], "title-sm": ["Inter"]
+          },
+          fontSize: {
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.5px", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.3px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen">
+  <!-- Header Bar -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+    <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-xs">
+        <button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </button>
+        <div class="flex items-center gap-2 ml-1">
+          <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">PS</div>
+          <h1 class="font-title-lg text-title-lg text-on-surface truncate">Settings</h1>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">v1.0.0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 w-full bg-surface pt-16 pb-safe">
+    <div class="flex flex-col w-full">
+      <div class="px-margin pt-space-sm pb-space-xl flex flex-col gap-space-lg">
+
+        <!-- Engine Status Pill & Context Banner -->
+        <div id="engine-status-card" class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between shadow-sm cursor-pointer select-none active:scale-[0.99] transition-transform">
+          <div class="flex items-center gap-space-sm min-w-0">
+            <div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 shadow-sm">
+              <span class="material-symbols-outlined text-[24px]">verified</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="font-title-sm text-title-sm text-on-surface truncate">Polar Core Engine</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">v2.4 (Active)</span>
+              </div>
+              <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Proprietary Pipeline • ARM64 Hardware Accelerated</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 bg-surface-container-highest px-2.5 py-1 rounded-full">
+            <span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+            <span class="font-label-sm text-label-sm text-primary font-bold">Active</span>
+          </div>
+        </div>
+
+        <!-- Section 1: Engine Capabilities & Enhancements -->
+        <div class="flex flex-col gap-space-sm">
+          <div class="px-space-xs flex items-center justify-between">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+              <h2 class="font-title-sm text-title-sm text-on-surface">Engine Capabilities &amp; Enhancements</h2>
+            </div>
+            <span class="font-label-sm text-label-sm text-tertiary font-semibold">Hardware Accelerated</span>
+          </div>
+
+          <!-- Card 1: Turbo 16x Stream Accelerator -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+                <span class="material-symbols-outlined text-[22px]">bolt</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-title-sm text-title-sm text-on-surface">Turbo Multi-Stream (16x)</span>
+                  <span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">Ultra Fast</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Splits media transfers into 16 concurrent segmented streams to saturate available connection bandwidth.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Turbo Multi-Stream" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="turbo-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Card 2: Studio Audio Extraction -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center shrink-0 text-on-primary-container">
+                <span class="material-symbols-outlined text-[22px]">graphic_eq</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-title-sm text-title-sm text-on-surface">Studio Audio Extractor</span>
+                  <span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm">320 kbps</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Direct stream demuxing and conversion to high-fidelity MP3, AAC, or FLAC without lossy double-encoding.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Studio Audio Extractor" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="audio-extract-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Card 3: Smart HD Artwork & Tagging -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+                <span class="material-symbols-outlined text-[22px]">photo_library</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-title-sm text-title-sm text-on-surface">Smart HD Artwork &amp; Metadata</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Embed official maximum-resolution thumbnail art, artists, title, and chapter markers into media files.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Smart HD Artwork & Metadata" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="artwork-metadata-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Card 4: Intelligent Sponsor & Ad Filter Shield -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-11 h-11 rounded-full bg-tertiary-container flex items-center justify-center shrink-0 text-on-tertiary-container">
+                <span class="material-symbols-outlined text-[22px]">verified_user</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-title-sm text-title-sm text-on-surface">Smart Sponsor &amp; Ad Shield</span>
+                  <span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Clean Cut</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Detect and automatically cut out sponsored promotions, intro filler, and dead silence during processing.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Smart Sponsor Shield" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="sponsor-shield-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Card 5: Universal Subtitle Grabber -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+                <span class="material-symbols-outlined text-[22px]">subtitles</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-title-sm text-title-sm text-on-surface">Auto Subtitles &amp; Captions</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Extract embedded and auto-generated multi-language subtitles in universal SRT and VTT formats.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Auto Subtitles" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="subtitles-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Card 6: Polar Cookie Vault (Pro) -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm hover:bg-surface-container transition-colors">
+            <div class="flex items-start gap-space-md">
+              <div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+                <span class="material-symbols-outlined text-[22px]">vpn_key</span>
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-title-sm text-title-sm text-on-surface">Polar Cookie Vault</span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm">Pro Session</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Encrypted</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Sync authenticated web sessions to download private Instagram Reels, followers-only Stories, and age-gated videos.
+                </p>
+              </div>
+            </div>
+            <div class="pt-space-xs flex justify-end">
+              <button id="vault-btn" aria-label="Configure Cookie Vault" class="h-10 px-4 rounded-full bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-on-surface flex items-center gap-space-xs transition-all font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[18px]">lock</span>
+                <span>Manage Session Vault</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: System Preferences & Helpers -->
+        <div class="flex flex-col gap-space-sm pt-2">
+          <div class="px-space-xs flex items-center justify-between">
+            <h3 class="font-title-sm text-title-sm text-on-surface">System Preferences &amp; Runtime Helpers</h3>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Android 14 Optimized</span>
+          </div>
+
+          <!-- Helper Card 1: Background Battery Usage -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm">
+            <div class="flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+                <span class="material-symbols-outlined text-[26px]">battery_charging_full</span>
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-title-sm text-title-sm text-on-surface">Unrestricted Battery Usage</span>
+                  <span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Essential</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Prevent Android system from killing background downloads when screen is locked or idle.
+                </p>
+              </div>
+            </div>
+            <div class="pt-space-xs flex justify-end">
+              <button id="battery-btn" aria-label="Configure Battery Permission" class="h-10 px-space-md rounded-full bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-on-surface flex items-center gap-space-xs transition-all">
+                <span class="font-label-md text-label-md">Configure Permission</span>
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Helper Card 2: In-App Engine & App Updater -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm">
+            <div class="flex items-start gap-space-md min-w-0">
+              <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+                <span class="material-symbols-outlined text-[24px]">sync</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-title-sm text-title-sm text-on-surface truncate">Silent In-App Engine &amp; App Updater</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Auto-check and silently hot-patch Polar Core binary daily for zero-interruption downloads.
+                </p>
+              </div>
+            </div>
+            <label aria-label="Toggle Auto Hot Patch" class="relative inline-flex items-center cursor-pointer shrink-0 ml-2">
+              <input checked class="sr-only peer" id="auto-patch-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Helper Card 3: Storage Location -->
+          <div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm">
+            <div class="flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+                <span class="material-symbols-outlined text-[24px]">folder</span>
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-title-sm text-title-sm text-on-surface">Storage Location</span>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Primary</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-primary mt-1 font-mono break-all font-semibold">
+                  Downloads / PolarSnap /
+                </p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Internal Storage (Scoped MediaStore Sandbox)
+                </p>
+              </div>
+            </div>
+            <div class="pt-space-xs flex items-center gap-space-xs justify-end">
+              <button id="change-storage-btn" class="h-10 px-3.5 rounded-full bg-primary hover:bg-primary-container active:scale-95 text-on-primary font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+                <span>Change Path</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Save Preferences & Diagnostics -->
+        <div class="mt-space-xs pt-space-xs flex flex-col gap-3">
+          <button class="w-full h-14 rounded-full bg-primary hover:bg-primary-container text-on-primary active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs shadow-md" id="save-settings-btn">
+            <span class="material-symbols-outlined text-[22px]">check_circle</span>
+            <span class="font-label-lg text-label-lg font-bold">Apply Engine Preferences</span>
+          </button>
+          
+          <div class="flex items-center justify-between px-2 pt-1 text-on-surface-variant">
+            <div class="flex flex-col">
+              <span class="font-label-md text-label-md font-semibold text-on-surface">PolarSnap — by Trandif</span>
+              <span class="font-body-sm text-body-sm">Version 1.0.0 (Build 100)</span>
+            </div>
+            <button id="check-ota-btn" class="h-8 px-3 rounded-full bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-primary text-xs font-semibold flex items-center gap-1 transition-all">
+              <span class="material-symbols-outlined text-[15px]">refresh</span>
+              <span>Check Updates</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hidden Diagnostics Bottom Sheet (Unlocked via 7 taps on Engine Card) -->
+        <div id="diagnostics-panel" class="hidden bg-inverse-surface rounded-lg p-4 shadow-xl border border-outline-variant/30 text-inverse-on-surface flex-col gap-2 mt-2">
+          <div class="flex items-center justify-between pb-2 border-b border-inverse-on-surface/10">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-tertiary-fixed text-[18px]">terminal</span>
+              <span class="font-mono font-bold text-xs text-tertiary-fixed">POLAR ENGINE TELEMETRY</span>
+            </div>
+            <button id="close-diag-btn" class="text-xs text-inverse-on-surface/60 hover:text-inverse-on-surface">Close</button>
+          </div>
+          <div class="font-mono text-xs space-y-1 text-inverse-on-surface/80 pt-1">
+            <div>• Core: Polar Native Pipeline v2.4 (Active)</div>
+            <div>• Acceleration: ARM64 NEON SIMD + MediaCodec</div>
+            <div>• Concurrency: 2-slot active queue (16 streams each)</div>
+            <div>• Color Filter Engine: CapCut 3D Hald CLUT (512x512)</div>
+            <div>• Security: D1 HWID Node-Locking Active</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    (function() {
+      let tapCount = 0;
+      let tapTimer = null;
+      const engineCard = document.getElementById('engine-status-card');
+      const diagPanel = document.getElementById('diagnostics-panel');
+      const closeDiagBtn = document.getElementById('close-diag-btn');
+      const saveBtn = document.getElementById('save-settings-btn');
+      const checkOtaBtn = document.getElementById('check-ota-btn');
+
+      // 7-tap Easter Egg for diagnostics
+      if (engineCard && diagPanel) {
+        engineCard.addEventListener('click', () => {
+          tapCount++;
+          clearTimeout(tapTimer);
+          tapTimer = setTimeout(() => { tapCount = 0; }, 2000);
+          if (tapCount >= 7) {
+            diagPanel.classList.remove('hidden');
+            diagPanel.classList.add('flex');
+            diagPanel.scrollIntoView({ behavior: 'smooth' });
+            tapCount = 0;
+          }
+        });
+      }
+
+      if (closeDiagBtn && diagPanel) {
+        closeDiagBtn.addEventListener('click', () => {
+          diagPanel.classList.add('hidden');
+          diagPanel.classList.remove('flex');
+        });
+      }
+
+      // Save button feedback
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          const originalHTML = saveBtn.innerHTML;
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[22px]">done_all</span><span class="font-label-lg text-label-lg font-bold">Preferences Applied!</span>';
+          saveBtn.classList.remove('bg-primary');
+          saveBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+          setTimeout(() => {
+            saveBtn.innerHTML = originalHTML;
+            saveBtn.classList.add('bg-primary');
+            saveBtn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+          }, 2000);
+        });
+      }
+
+      // OTA check button feedback
+      if (checkOtaBtn) {
+        checkOtaBtn.addEventListener('click', () => {
+          checkOtaBtn.innerText = 'Checking...';
+          setTimeout(() => {
+            checkOtaBtn.innerText = 'Latest Version (Up to Date)';
+            setTimeout(() => {
+              checkOtaBtn.innerHTML = '<span class="material-symbols-outlined text-[15px]">refresh</span><span>Check Updates</span>';
+            }, 2500);
+          }, 1200);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

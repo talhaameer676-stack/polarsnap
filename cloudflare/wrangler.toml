@@ -1,0 +1,25 @@
+# Cloudflare Worker Configuration: PolarSnap Licensing & Kill-Switch Authority
+# Strictly isolated to PolarSnap - never touches or binds any other project in user's Cloudflare account
+
+name = "polarsnap-licensing"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+POLARSNAP_APP_NAME = "PolarSnap — by Trandif"
+MIN_CLIENT_VERSION = "2.4.0"
+MAX_TIMESTAMP_DRIFT_SEC = 300
+OFFLINE_GRACE_PERIOD_SEC = 604800 # 7 days (7 * 24 * 3600)
+
+# Isolated D1 Database Binding
+# Dedicated exclusively to PolarSnap device licensing, request nonces, and kill-switch policy
+[[d1_databases]]
+binding = "DB"
+database_name = "polarsnap_licensing_db"
+database_id = "00000000-0000-0000-0000-000000000000" # Local / dev fallback, replaced during production deployment
+migrations_dir = "./migrations"
+
+# Observability and logs
+[observability]
+enabled = true

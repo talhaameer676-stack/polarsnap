@@ -1,0 +1,3454 @@
+{
+  "timestamp": "2026-11-06T15:51:54Z",
+  "total_tests": 368,
+  "passed": 368,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 0.0763459999980114,
+  "tier_counts": {
+    "1": 160,
+    "2": 160,
+    "3": 32,
+    "4": 16
+  },
+  "feature_coverage": {
+    "1": 11,
+    "2": 13,
+    "3": 17,
+    "4": 15,
+    "5": 16,
+    "6": 14,
+    "7": 14,
+    "8": 13,
+    "9": 14,
+    "10": 12,
+    "11": 17,
+    "12": 14,
+    "13": 15,
+    "14": 13,
+    "15": 18,
+    "16": 16,
+    "17": 23,
+    "18": 14,
+    "19": 23,
+    "20": 10,
+    "21": 15,
+    "22": 12,
+    "23": 11,
+    "24": 11,
+    "25": 12,
+    "26": 15,
+    "27": 14,
+    "28": 16,
+    "29": 13,
+    "30": 14,
+    "31": 11,
+    "32": 11
+  },
+  "covered_features_count": 32,
+  "is_success": true,
+  "details": [
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature1_16kb_page_aligned_valid",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature1_16kb_page_alignment_rejects_4kb_legacy",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature1_large_64kb_alignment_accepted",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature1_non_power_of_two_alignment_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature1_offset_vaddr_misalignment_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature2_engine_branding_identity_exact",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature2_engine_status_active_flag",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature2_rebranding_sanitizes_cli_output",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature2_version_tag_invariance",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature2_zero_unbranded_leaks_in_branding_manifest",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature3_turbo_acceleration_disabled_omits_aria2c",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature3_turbo_acceleration_enabled_maps_aria2c_and_16_sockets",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature3_turbo_preserves_security_flags",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature3_turbo_preserves_url_target",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature3_turbo_socket_bounded_ceiling",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature4_audio_only_mp3_fallback",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature4_lossless_audio_compatible_with_turbo",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature4_lossless_audio_extracts_flac",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature4_lossless_audio_omits_video_streams",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature4_lossless_audio_with_flac_container",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature5_clean_watermark_disabled_omits_extractor_arg",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature5_clean_watermark_enabled_sets_extractor_arg",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature5_clean_watermark_preserves_resolution_limit",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature5_clean_watermark_with_mkv_container",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature5_clean_watermark_with_mp4_container",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature6_sponsor_stripper_disabled_omits_flag",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature6_sponsor_stripper_enabled_adds_sponsorblock",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature6_sponsor_stripper_with_audio_only",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature6_sponsor_stripper_with_turbo_acceleration",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature6_sponsor_stripper_zero_leakage_in_args",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature7_contains_leak_detector_accuracy",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature7_extract_telemetry_progress_speed_eta",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature7_scrub_aria2c_binary_references",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature7_scrub_python_runtime_paths",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature7_scrub_ytdlp_bracket_tags",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature8_anti_bot_verification_transformed",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature8_drm_and_copyright_transformed_to_stream_protected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature8_invalid_url_transformed_to_invalid_media_url",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature8_network_timeout_transformed_to_media_unreachable",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m1_core_engine.TestTier1Milestone1CoreEngine.test_feature8_rate_limit_transformed_to_service_cooldown",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature10_bijective_capcut_to_hald_coordinate_transform",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature10_bijective_coordinate_inversion",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature10_bijective_rgb_to_capcut_and_back",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature10_bijective_rgb_to_hald_and_back",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature10_grid_volume_matches_64_cubed",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature11_filtergraph_contains_5_ordered_stages",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature11_lanczos_scaling_parameters_for_1440p",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature11_lanczos_scaling_parameters_for_4k",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature11_post_upscale_unsharp_coefficients",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature11_vibrancy_eq_coefficients",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature12_fhd_frame_ram_equals_6_22_mb",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature12_filtergraph_applies_lut_before_scale",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature12_pre_upscale_achieves_75_percent_ram_savings",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature12_sharpening_applies_before_scale",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature12_uhd_4k_frame_ram_equals_24_88_mb",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature13_forced_software_fallback",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature13_hevc_bitrate_parameter",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature13_tier1_hevc_mediacodec_selected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature13_tier2_h264_mediacodec_fallback",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature13_tier3_software_libx264_fallback",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature14_4k_format_spec_prioritizes_2160p",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature14_4k_master_compatible_with_mkv_container",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature14_4k_master_merges_to_mp4",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature14_4k_master_preserves_audio_streams",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature14_4k_master_uncompressed_no_subsampling_in_pipeline",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature9_four_canonical_capcut_presets_exist",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature9_hald_clut_level_8_dimensions",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature9_preset_active_injects_haldclut",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature9_preset_none_bypasses_lut_stage",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m2_remaster_lut.TestTier1Milestone2RemasterLUT.test_feature9_total_bundled_lut_size_budget",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature15_max_concurrent_active_slots_is_two",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature15_max_sub_sockets_per_slot_is_16",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature15_slot_promotes_pending_task_on_completion",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature15_third_enqueued_task_waits_in_pending",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature15_total_tcp_sockets_ceiling_is_32",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature16_batch_enqueue_multiple_items",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature16_batch_item_individual_state_tracking",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature16_batch_preserves_turbo_per_item",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature16_batch_progress_aggregation",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature16_batch_selective_cancellation",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature17_cancel_task",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature17_complete_task_sets_progress_100_percent",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature17_invalid_pause_on_pending_task_fails",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature17_pause_active_task",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature17_resume_paused_task",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature18_notification_action_intents",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature18_notification_throttling_rejects_sub_second_bursts",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature18_notification_update_allowed_after_interval",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature18_service_permission_identifier",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature18_service_type_is_datasync",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature19_audio_routes_to_music_folder",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature19_cannot_commit_zero_byte_media",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature19_phase1_create_pending_record",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature19_phase2_write_bytes_while_pending",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m3_queue_subsystem.TestTier1Milestone3QueueSubsystem.test_feature19_phase3_commit_clears_pending_flag",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature20_abyssal_indigo_hex",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature20_bright_cyan_hex",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature20_glacier_teal_hex",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature20_primary_deep_cyan_hex",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature20_wcag_aa_contrast_light_surface",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature21_mascot_mood_cinematic_remastering",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature21_mascot_mood_downloading_active",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature21_mascot_mood_earmuffs_when_offline",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature21_mascot_mood_idle_on_normal_state",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature21_mascot_mood_sleeping_on_empty_vault",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature22_clean_watermark_toggle_card_on_home",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature22_home_screen_destination_route",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature22_home_screen_mode_chips_exist",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature22_remaster_preview_card_toggle",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature22_url_paste_dock_auto_detect_pill",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature23_bottom_sheet_destination_route",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature23_capcut_preset_selection",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature23_container_segmented_switch_options",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature23_playlist_batch_banner_when_multiple_items",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature23_resolution_selector_pills",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature24_downloads_destination_route",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature24_live_throughput_telemetry_hub_formatting",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature24_multi_gradient_progress_tokens",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature24_pip_action_controls_supported",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature24_thumbnail_aspect_ratio_16_to_9",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature25_four_whitelabeled_toggle_cards_exist",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature25_rebranded_engine_banner_text",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature25_secret_7_tap_developer_console_unlock",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature25_secret_developer_console_reset",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m4_ui_branding.TestTier1Milestone4UIBranding.test_feature25_settings_destination_route",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature26_cloudflare_worker_endpoint_contract",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature26_device_id_header_required",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature26_isolated_worker_binding_name",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature26_kill_switch_revocation",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature26_license_status_structure",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature27_hmac_sha256_generation_and_verification",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature27_nonce_replay_attack_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature27_signature_mismatch_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature27_tampered_device_id_fails",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature27_timestamp_drift_rejection",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature28_clock_tampering_backwards_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature28_offline_grace_duration_equals_7_days",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature28_offline_grace_expires_past_7_days",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature28_offline_grace_valid_on_exact_boundary",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature28_offline_grace_valid_within_7_days",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature29_checksum_case_insensitivity",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature29_ota_package_verifier_corrupt_apk_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature29_ota_package_verifier_valid_checksum",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature29_package_installer_user_action_not_required",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature29_update_info_schema",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature30_admob_detected_and_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature30_clean_content_passes_ad_scanner",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature30_monetag_detected_and_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature30_unity_ads_detected_and_rejected",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m5_licensing_ota.TestTier1Milestone5LicensingOTA.test_feature30_zero_ad_trackers_in_contract_manifest",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature31_all_four_test_tiers_defined",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature31_feature_coverage_count_equals_32",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature31_single_failure_fails_summary",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature31_test_summary_success_rate",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature31_tier_count_breakdown",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature32_adversarial_tier5_defined",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature32_lmk_kills_unoptimized_process_under_pressure",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature32_lmk_pressure_simulation_survives_with_optimization",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature32_stress_memory_reclaim_under_extreme_pressure",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier1_features.test_m6_test_hardening.TestTier1Milestone6TestHardening.test_feature32_trim_memory_constants",
+      "status": "PASSED",
+      "tier": 1,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature1_boundary_16kb_minus_1",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature1_boundary_16kb_plus_1",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature1_boundary_max_32bit_vaddr",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature1_boundary_negative_offset",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature1_boundary_zero_alignment",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        1
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature2_boundary_case_insensitive_scrubbing",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature2_boundary_empty_string_log_scrubbed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature2_boundary_huge_log_no_catastrophic_backtracking",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature2_boundary_repeated_forbidden_tokens",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature2_boundary_whitespace_only_log",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        2
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature3_boundary_all_toggles_disabled_simultaneously",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature3_boundary_all_toggles_enabled_simultaneously",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature3_boundary_both_turbo_and_lossless",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature3_boundary_extreme_url_length",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature3_boundary_url_with_special_characters",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        3
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature4_boundary_audio_extraction_with_sponsor_stripper",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature4_boundary_audio_only_with_mkv_container_request",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature4_boundary_flac_container_selection",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature4_boundary_mp3_container_selection",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature4_boundary_zero_leakage_in_audio_args",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        4
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature5_boundary_clean_watermark_with_1440p_limit",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature5_boundary_clean_watermark_with_4k_limit",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature5_boundary_clean_watermark_with_720p_limit",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature5_boundary_clean_watermark_with_mkv",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature5_boundary_non_tiktok_url_with_clean_watermark",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        5
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature6_boundary_short_video_url",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature6_boundary_sponsor_stripper_no_leak",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature6_boundary_sponsor_stripper_position",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature6_boundary_sponsor_stripper_with_all_resolutions",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature6_boundary_url_with_existing_timestamp",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        6
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature7_boundary_aria2c_in_parentheses_scrubbed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature7_boundary_multiline_python_traceback_scrubbed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature7_boundary_telemetry_at_0_percent",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature7_boundary_telemetry_at_100_percent",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature7_boundary_telemetry_non_matching_line",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        7
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature8_boundary_empty_error_string",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature8_boundary_geo_restricted_video",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature8_boundary_mixed_error_bot_and_timeout",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature8_boundary_rate_limit_with_retry_after",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m1_boundaries.TestTier2Milestone1Boundaries.test_feature8_boundary_unknown_obscure_exit_code",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature10_boundary_maximum_corner",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature10_boundary_origin_corner",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature10_boundary_pure_blue_maximum",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature10_boundary_pure_green_maximum",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature10_boundary_pure_red_maximum",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        10
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature11_boundary_1080p_target_resolution",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature11_boundary_all_enhancements_disabled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature11_boundary_filtergraph_separator_syntax",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature11_boundary_sharpening_disabled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature11_boundary_super_resolution_disabled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        11
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature12_boundary_720p_to_4k_savings_ratio",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature12_boundary_8k_frame_ram_stress",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature12_boundary_same_resolution_zero_savings",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature12_boundary_single_pixel_frame",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature12_boundary_zero_dimension_frame_ram",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature13_boundary_empty_codec_list_software_fallback",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature13_boundary_force_software_ignores_all_hardware",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature13_boundary_h264_mediacodec_bitrate",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature13_boundary_hevc_takes_precedence_over_h264",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature13_boundary_software_crf_18",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature14_boundary_4k_format_syntax",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature14_boundary_4k_with_sponsor_stripper",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature14_boundary_4k_with_turbo_preserves_downloader",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature14_boundary_lut_intensity_range",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature14_boundary_target_resolution_dimensions",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature9_boundary_all_4_preset_names_unique",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature9_boundary_level_7_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature9_boundary_level_9_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature9_boundary_missing_lut_file_path_omits_stage",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m2_boundaries.TestTier2Milestone2Boundaries.test_feature9_boundary_preset_none_with_path_omits_stage",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        9
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature15_boundary_mixed_turbo_socket_total",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature15_boundary_rapid_completions_drain_queue",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature15_boundary_ten_tasks_enqueued_retains_two_active",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature15_boundary_turbo_disabled_uses_1_socket_per_slot",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature15_boundary_zero_tasks_enqueued",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature16_boundary_batch_cancelling_all_active_promotes_next_two",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature16_boundary_batch_progress_at_100_percent",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature16_boundary_batch_progress_at_zero",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature16_boundary_large_batch_50_items",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature16_boundary_single_item_batch",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature17_boundary_cancel_non_existent_task_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature17_boundary_complete_non_existent_task_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature17_boundary_pause_non_existent_task_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature17_boundary_repeated_cancellation_idempotent",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature17_boundary_resume_non_paused_task_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature18_boundary_999_ms_interval_throttled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature18_boundary_exact_1_second_interval_allowed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature18_boundary_large_interval_allowed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature18_boundary_negative_elapsed_time_throttled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature18_boundary_zero_elapsed_time_throttled",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature19_boundary_commit_non_existent_uri_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature19_boundary_double_commit_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature19_boundary_large_file_size_bytes",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature19_boundary_write_bytes_to_non_existent_uri_fails",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m3_boundaries.TestTier2Milestone3Boundaries.test_feature19_boundary_write_zero_bytes_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature20_boundary_abyssal_indigo_wcag_aaa_contrast",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature20_boundary_hex_parsing_with_or_without_hash",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature20_boundary_palette_luminance_monotonic_order",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature20_boundary_pure_black_white_luminance",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature20_boundary_same_color_contrast_ratio_is_1",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        20
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature21_boundary_all_mascot_moods_unique",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature21_boundary_empty_queue_mood",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature21_boundary_offline_takes_precedence_over_active_downloads",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature21_boundary_remastering_precedes_standard_downloading",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature21_boundary_ten_concurrent_downloads_active_mood",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature22_boundary_clipboard_empty_string",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature22_boundary_clipboard_non_url_ignored",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature22_boundary_mode_chip_switch",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature22_boundary_preview_card_default_state",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature22_boundary_url_with_whitespace_trimmed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature23_boundary_audio_only_limits_containers",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature23_boundary_lut_intensity_at_max",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature23_boundary_lut_intensity_at_zero",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature23_boundary_playlist_banner_hidden_at_1_item",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature23_boundary_playlist_banner_visible_at_2_items",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature24_boundary_all_destinations_unique",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature24_boundary_progress_clamping_at_0_0",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature24_boundary_progress_clamping_at_1_0",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature24_boundary_speed_hub_100_mb",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature24_boundary_speed_hub_zero_bytes",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature25_boundary_dev_console_at_6_taps_locked",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature25_boundary_dev_console_at_7_taps_unlocked",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature25_boundary_dev_console_at_8_taps_remains_unlocked",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature25_boundary_dev_console_reset_locks_again",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m4_boundaries.TestTier2Milestone4Boundaries.test_feature25_boundary_dev_console_spam_100_taps",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature26_boundary_all_device_ids_case_sensitive",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature26_boundary_empty_device_id_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature26_boundary_revocation_overrides_future_expiration",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature26_boundary_sql_injection_device_id_sanitized",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature26_boundary_status_active_when_not_revoked",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        26
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature27_boundary_drift_at_exact_negative_300s",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature27_boundary_drift_at_exact_positive_300s",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature27_boundary_drift_at_negative_301s_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature27_boundary_drift_at_positive_301s_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature27_boundary_nonce_cleared_after_window",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature28_boundary_604801s_grace_expired",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature28_boundary_clock_rollback_1_day_tamper",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature28_boundary_clock_rollback_1_second_tamper",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature28_boundary_exact_604800s_grace",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature28_boundary_zero_elapsed_time_valid",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature29_boundary_empty_checksum_string_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature29_boundary_same_version_code_ignored",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature29_boundary_single_bit_flip_fails_checksum",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature29_boundary_version_code_downgrade_rejected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature29_boundary_zero_byte_apk",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature30_boundary_admob_case_insensitive_detection",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature30_boundary_adview_component_detected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature30_boundary_clean_polar_codebase_sample",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature30_boundary_interstitial_ad_detected",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m5_boundaries.TestTier2Milestone5Boundaries.test_feature30_boundary_monetag_mixed_case",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature31_boundary_all_failed_summary",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature31_boundary_feature_coverage_31_out_of_32",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature31_boundary_large_suite_timing",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature31_boundary_tier_coverage_keys",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature31_boundary_zero_tests_not_passed",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        31
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature32_boundary_extreme_allocation_1000mb",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature32_boundary_extreme_allocation_survives_generous_threshold",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature32_boundary_retained_below_threshold_by_one_percent",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature32_boundary_retained_equals_threshold_exact",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier2_boundaries.test_m6_boundaries.TestTier2Milestone6Boundaries.test_feature32_boundary_zero_threshold_always_kills",
+      "status": "PASSED",
+      "tier": 2,
+      "features": [
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_01_turbo_plus_teal_and_orange_4k_mediastore_movies",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        3,
+        11,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_02_lossless_audio_flac_mediastore_music_offline_grace",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        4,
+        19,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_03_clean_watermark_viral_warm_pop_bounded_queue",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        5,
+        9,
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_04_sponsor_stripper_moody_noir_hevc_mediacodec",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        6,
+        11,
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_05_turbo_plus_clean_watermark_pre_upscale_ram_savings",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        3,
+        5,
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_06_lossless_audio_sponsor_stripper_pause_resume",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        4,
+        6,
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_07_studio_bright_lut_h264_mediacodec_mediastore",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        9,
+        13,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_08_turbo_playlist_batch_foreground_notification",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        3,
+        16,
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_09_clean_watermark_scrubbed_logs_exception_sanitizer",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        5,
+        7,
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_10_bijective_lut_4k_master_lanczos_filtergraph",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        10,
+        11,
+        14
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_11_bounded_queue_completion_offline_grace_boundary",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        15,
+        17,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_12_lossless_audio_mediastore_ad_free_audit",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        4,
+        19,
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_13_remaster_memory_savings_software_fallback",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        11,
+        12,
+        13
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_14_rebranded_engine_scrubber_dev_console",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        2,
+        7,
+        25
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_15_download_lifecycle_mediastore_telemetry_speed",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        17,
+        19,
+        24
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_pairwise_pipeline.TestTier3PairwisePipeline.test_pairwise_16_cloudflare_auth_hmac_silent_ota_apk",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        26,
+        27,
+        29
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_01_pause_slot_0_promotes_pending_to_slot_0",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        15,
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_02_resume_paused_task_when_queue_full_waits_in_pending",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        15,
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_03_network_loss_switches_mascot_to_earmuffs_during_download",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        17,
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_04_remastering_phase_switches_mascot_to_cinematic",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        11,
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_05_mediastore_write_failure_aborts_commit",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        17,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_06_kill_switch_revocation_blocks_grace_period",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        26,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_07_foreground_notification_throttling_during_queue_turnover",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        15,
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_08_4k_filtergraph_with_pre_upscale_memory_savings",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        11,
+        12
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_09_completed_task_triggers_mediastore_reveal",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        17,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_10_hmac_replay_attack_rejected_during_grace_period",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        27,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_11_turbo_toggle_affects_socket_accounting_dynamically",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        3,
+        15
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_12_playlist_batch_inherits_clean_watermark",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        5,
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_13_playlist_batch_inherits_sponsor_stripper",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        6,
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_14_mascot_mood_transitions_to_sleeping_when_all_completed",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        17,
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_15_online_reconnection_renews_7_day_grace",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        26,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier3_combinations.test_state_transitions.TestTier3StateTransitions.test_transition_16_silent_ota_upgrade_maintains_ad_free_guarantee",
+      "status": "PASSED",
+      "tier": 3,
+      "features": [
+        29,
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_instagram_watermark_audio.TestWorkloadInstagramWatermarkAudio.test_workflow_b1_tiktok_clean_watermark_lossless_audio_flac",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        2,
+        4,
+        5,
+        17,
+        19,
+        22
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_instagram_watermark_audio.TestWorkloadInstagramWatermarkAudio.test_workflow_b2_instagram_reel_viral_warm_pop_remaster",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        5,
+        9,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_instagram_watermark_audio.TestWorkloadInstagramWatermarkAudio.test_workflow_b3_watermark_extraction_anti_bot_error_sanitization",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        7,
+        8
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_instagram_watermark_audio.TestWorkloadInstagramWatermarkAudio.test_workflow_b4_lossless_audio_zero_ad_trackers_verification",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        4,
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_licensing_ota_lifecycle.TestWorkloadLicensingOTALifecycle.test_workflow_d1_air_gapped_offline_grace_and_reconnection",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        26,
+        27,
+        28
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_licensing_ota_lifecycle.TestWorkloadLicensingOTALifecycle.test_workflow_d2_remote_kill_switch_revocation",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        26,
+        27
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_licensing_ota_lifecycle.TestWorkloadLicensingOTALifecycle.test_workflow_d3_silent_github_ota_update_pipeline",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        29,
+        30
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_licensing_ota_lifecycle.TestWorkloadLicensingOTALifecycle.test_workflow_d4_developer_console_and_adversarial_hardening",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        25,
+        31,
+        32
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_playlist_batch_export.TestWorkloadPlaylistBatchExport.test_workflow_c1_playlist_batch_concurrency_and_notification",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        3,
+        15,
+        16,
+        18,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_playlist_batch_export.TestWorkloadPlaylistBatchExport.test_workflow_c2_playlist_batch_pause_resume_slot_promotion",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        15,
+        16,
+        17
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_playlist_batch_export.TestWorkloadPlaylistBatchExport.test_workflow_c3_playlist_batch_network_drop_and_recovery",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        17,
+        21
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_playlist_batch_export.TestWorkloadPlaylistBatchExport.test_workflow_c4_playlist_batch_item_rate_limit_resilience",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        8,
+        16
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_youtube_4k_remaster.TestWorkloadYouTube4KRemaster.test_workflow_a1_youtube_4k_teal_and_orange_complete_pipeline",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        19,
+        22,
+        23
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_youtube_4k_remaster.TestWorkloadYouTube4KRemaster.test_workflow_a2_youtube_4k_live_telemetry_and_sponsor_splicing",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        3,
+        6,
+        7,
+        18
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_youtube_4k_remaster.TestWorkloadYouTube4KRemaster.test_workflow_a3_youtube_4k_mediacodec_fallback_to_h264",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        13,
+        14,
+        19
+      ],
+      "error": null
+    },
+    {
+      "name": "tests.e2e.tier4_workloads.test_workload_youtube_4k_remaster.TestWorkloadYouTube4KRemaster.test_workflow_a4_youtube_4k_user_cancellation_mid_remaster",
+      "status": "PASSED",
+      "tier": 4,
+      "features": [
+        17,
+        19,
+        21
+      ],
+      "error": null
+    }
+  ]
+}

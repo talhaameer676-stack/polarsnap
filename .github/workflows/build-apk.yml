@@ -1,0 +1,60 @@
+name: Build PolarSnap APK & OTA Release
+
+on:
+  push:
+    branches: [ main, dev, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x gradlew || true
+
+      - name: Build Debug & Release APK
+        run: |
+          ./gradlew assembleDebug --no-daemon --stacktrace || gradle assembleDebug
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PolarSnap-APK
+          path: app/build/outputs/apk/**/*.apk
+
+      - name: Create GitHub Release for Silent OTA
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/') || github.ref == 'refs/heads/main'
+        with:
+          files: app/build/outputs/apk/**/*.apk
+          tag_name: v1.0.0
+          name: "PolarSnap v1.0.0 — Commercial Release"
+          body: |
+            ## PolarSnap — by Trandif (v1.0.0)
+            
+            - **Whitelabeled Polar Core Engine v2.4**: Zero yt-dlp or terminal leaks.
+            - **4K Master Remastering**: Lanczos + Edge Unsharp Masking + CapCut 3D Hald CLUT Level 8 color grading.
+            - **High-Speed Acceleration**: 16-stream parallel downloading.
+            - **Mascot Branding**: Arctic Polar Bear cub with snowflake.
+            - **Silent OTA Support**: In-app package session updates.
+            - **Isolated D1 Licensing**: Hardware ID locking & remote kill-switch.
+            - **Ad-Free Guarantee**: Zero Monetag/third-party ads.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
