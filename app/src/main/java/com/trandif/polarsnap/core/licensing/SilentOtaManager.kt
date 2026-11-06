@@ -57,7 +57,7 @@ class AndroidPackageInstallerDelegate(
             onSessionCreated(sessionId)
             val session = packageInstaller.openSession(sessionId)
 
-            session.openOutputStream("polarsnap_update.apk").use { outputStream ->
+            session.openWrite("polarsnap_update.apk", 0, -1).use { outputStream ->
                 apkStream.copyTo(outputStream)
                 session.fsync(outputStream)
             }

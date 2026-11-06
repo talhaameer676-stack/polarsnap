@@ -92,15 +92,12 @@ class DownloadQueueManager(
             taskId = task.id
         ) { event ->
             task.progress = event.progressPercent
-            task.speedBytesPerSec = event.speedBytesPerSec
-            task.etaSeconds = event.etaSeconds
-            task.downloadedBytes = event.downloadedBytes
-            task.totalBytes = event.totalBytes
         }
 
         downloadResult.onSuccess { artifact ->
-            var finalFile = artifact.file
+            var finalFile = File(artifact.filePath)
             task.title = artifact.title
+            task.totalBytes = artifact.fileSize
 
             // Remaster stage if requested
             if (task.request.isRemasterEnabled && remasterPipeline != null) {
