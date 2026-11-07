@@ -4,10 +4,12 @@ import android.app.Application
 import com.trandif.polarsnap.core.engine.PolarCoreEngine
 import com.trandif.polarsnap.core.queue.DownloadQueueManager
 import com.trandif.polarsnap.core.remaster.FFmpegRemasterPipeline
+import com.trandif.polarsnap.core.remaster.HaldClutManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import java.io.File
 
 class PolarSnapApp : Application() {
 
@@ -21,7 +23,8 @@ class PolarSnapApp : Application() {
         instance = this
 
         val polarEngine = PolarCoreEngine.getInstance()
-        val remasterPipeline = FFmpegRemasterPipeline(this)
+        val haldClutManager = HaldClutManager(File(cacheDir, "luts"))
+        val remasterPipeline = FFmpegRemasterPipeline(haldClutManager)
         queueManager = DownloadQueueManager(
             context = this,
             polarEngine = polarEngine,
