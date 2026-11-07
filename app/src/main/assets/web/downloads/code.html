@@ -1,248 +1,218 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#79f7e3", "on-error-container": "#93000a", "on-surface-variant": "#3f484b", "inverse-surface": "#2b3136", "surface-container-low": "#eff4fa", "on-background": "#161c21", "inverse-primary": "#86d2e6", "outline-variant": "#bec8cb", "on-secondary-container": "#3f5881", "error-container": "#ffdad6", "surface-container-high": "#e3e9ef", "inverse-on-surface": "#ecf1f7", "surface-dim": "#d5dbe0", "secondary-fixed-dim": "#aec7f7", "on-surface": "#161c21", "background": "#f5faff", "secondary-container": "#b6d0ff", "on-tertiary-fixed": "#00201c", "primary": "#004e5c", "surface-variant": "#dee3e9", "on-secondary-fixed": "#001b3d", "on-secondary-fixed-variant": "#2e476f", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#005047", "on-primary-fixed-variant": "#004e5c", "on-primary-container": "#98e4f9", "surface-container": "#e9eef4", "surface": "#f5faff", "primary-container": "#00687a", "secondary-fixed": "#d6e3ff", "tertiary-container": "#006b5f", "primary-fixed-dim": "#86d2e6", "surface-container-highest": "#dee3e9", "secondary": "#465f88", "on-primary-fixed": "#001f26", "on-error": "#ffffff", "outline": "#6f797c", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#59dbc7", "surface-container-lowest": "#ffffff", "primary-fixed": "#abedff", "tertiary": "#005147", "surface-bright": "#f5faff", "on-tertiary-container": "#6feed9", "surface-tint": "#00687a" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "margin": "1rem", "margin-tablet": "2rem", "space-sm": "0.5rem", "gutter-tablet": "1.5rem", "gutter-desktop": "2rem", "margin-desktop": "3rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem" }, "fontFamily": { "label-md": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "title-md": ["Inter"], "title-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "title-sm": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.5px", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.15px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.3px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "400" }], "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.1px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.2px", "fontWeight": "700" }], "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }] } } } };</script><style>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="theme-color" content="#F1F5F9"/>
+  <title>PolarSnap — Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
     body {
-      min-height: max(884px, 100dvh);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overscroll-behavior: none;
+      -webkit-tap-highlight-color: transparent;
     }
+    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    .pt-safe { padding-top: env(safe-area-inset-top, 16px); }
+    ::-webkit-scrollbar { display: none; }
   </style>
-  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="PolarSnap Mascot Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC9XQm19aFC_0dqNX_tbx8PDyZtSH0TMIFzYXzH1gBCLRhNS-pVZXgevHI8RyS2oBusmQYjwxgPVgO_abceL9qNbWGzJ4uiWIouDVMF_3uqglwzXxSLYGrBtbq2YgJJow-NlkQXGMFlM2yjexmB05_643WN79QP5n_eZku0oFwy5kTK9RTI1dEgLWI0ElVhyUdJKH5RW5miqV4t2PlBg5lvBLTkN4Bk3QPw3GvjIbAR"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">PolarSnap</span><h1 class="font-title-lg text-title-lg text-on-surface">Downloads</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Active Tasks Queue" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">downloading</span><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center">2</span></div></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24"><div class="flex flex-col w-full px-margin space-y-space-md">
-<!-- Interactive Top Segmented Capsule Control -->
-<div class="w-full bg-surface-container-high p-1.5 rounded-full flex items-center justify-between shadow-sm">
-<button class="flex-1 py-2.5 px-4 rounded-full bg-surface text-primary font-label-md text-label-md shadow-sm transition-all duration-200 flex items-center justify-center gap-space-xs" id="tab-downloading">
-<span class="material-symbols-outlined text-[18px]">downloading</span>
-<span>Downloading</span>
-<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">2</span>
-</button>
-<button class="flex-1 py-2.5 px-4 rounded-full bg-transparent text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-200 flex items-center justify-center gap-space-xs" id="tab-library">
-<span class="material-symbols-outlined text-[18px]">folder_check</span>
-<span>Library</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">18</span>
-</button>
-</div>
-<!-- Telemetry Speed Hub Banner -->
-<div class="w-full p-4 rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Engine Throughput</span>
-<span class="font-title-md text-title-md text-on-surface flex items-center gap-1">
-          18.3 MB/s <span class="font-body-sm text-body-sm text-tertiary font-semibold">(2 active streams)</span>
-</span>
-</div>
-</div>
-<button class="h-10 px-3 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-variant transition-colors" title="Turbo Throttle Boost Active">
-<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
-      Turbo On
-    </button>
-</div>
-<!-- Active Card 1: Future Beats (76% Progress) -->
-<div class="w-full bg-surface-container-low rounded-2xl p-4 shadow-sm flex flex-col space-y-3 relative overflow-hidden">
-<!-- Subtle gradient glow in card corner -->
-<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
-<div class="flex gap-space-sm items-start">
-<div class="relative w-28 aspect-video rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Chilled cyberpunk neon city bathed in cyan and misty indigo rain, soft glowing lo-fi aesthetic artwork with smooth bokeh lights and cozy ambient reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpf5Gxd6z7S6u6hGiHe6m4sPRkearQheOrebGrZKki8ZI53_ulcogdPS6grXd27mzH230DnWw4rqEupS5QlMww-2rm4KqyUbzJH3x-vqEPCG3EzeiL5upRai5R0PzoJc39nk37jI2_NZfA9sUJWZqWUPBxAVSsHKDWNYWa1xDvb5kY-axbeWR_uR3Ru5-2PWDh9zQg6tTjJ007lfkKWatpemDLdmATKKAMMP9MKz9k"/>
-<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-full bg-primary/90 text-on-primary font-label-sm text-label-sm backdrop-blur-xs flex items-center gap-0.5">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span>
-          76%
-        </span>
-</div>
-<div class="flex-1 min-w-0 flex flex-col justify-center">
-<div class="flex items-center gap-1 mb-0.5">
-<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold">Audio Hi-Res</span>
-<span class="text-on-surface-variant font-label-sm text-label-sm">• FLAC 24-bit</span>
-</div>
-<h2 class="font-title-sm text-title-sm text-on-surface truncate">Future Beats - Chillstep &amp; Ambient Lo-Fi</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Channel: ArcticSoundwaves • 320kbps</p>
-</div>
-</div>
-<!-- Live Telemetry Row -->
-<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-<div class="flex items-center gap-1.5">
-<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px]">bolt</span> 14.2 MB/s
-        </span>
-<span class="text-on-surface font-semibold">8s left</span>
-</div>
-<span class="font-label-sm text-label-sm text-outline">84.6 MB / 112 MB</span>
-</div>
-<!-- Multi-Gradient Dynamic Progress Bar -->
-<div class="w-full h-2 rounded-full bg-surface-dim overflow-hidden p-0.5">
-<div class="h-full rounded-full bg-gradient-to-r from-primary via-primary-container to-tertiary-fixed-dim transition-all duration-300 relative shadow-sm" style="width: 76%;">
-<div class="absolute right-0 top-0 bottom-0 w-2 bg-on-primary rounded-full opacity-70 animate-pulse"></div>
-</div>
-</div>
-<!-- Control Buttons & Processing Status Chip -->
-<div class="flex items-center justify-between pt-1">
-<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px] text-tertiary animate-spin" style="animation-duration: 4s;">auto_fix_high</span>
-<span>Remastering active ✨</span>
-</div>
-<div class="flex items-center gap-space-xs">
-<button aria-label="Pause download" class="h-10 px-4 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1 transition-all active:scale-95">
-<span class="material-symbols-outlined text-[18px]">pause</span>
-<span>Pause</span>
-</button>
-<button aria-label="Cancel download" class="h-10 w-10 rounded-full bg-surface-container text-on-surface-variant hover:text-error hover:bg-error-container hover:text-on-error-container flex items-center justify-center transition-all active:scale-90">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Active Card 2: Queued & Connecting Stream (12% Progress) -->
-<div class="w-full bg-surface-container-low rounded-2xl p-4 shadow-sm flex flex-col space-y-3">
-<div class="flex gap-space-sm items-start">
-<div class="relative w-28 aspect-video rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Breathtaking wide-angle nature documentary shot of an arctic fox on crystalline azure glacial ice beneath a sharp polar sunrise with crystalline highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh_uMQvjDni5XVdfTNLxc0Rkg_uSDEw3mRaHvDG-WIkVzPkoVrjOwZ_vn1-D0yInwpHGPK-lAG4F6dO8P28bKS0W1tcv8b2IWDlr38jvtbJCBx6zvTqFfGvazaMLs0DbnyuzcFlDeXm0dDUcMfPep5XsS0prB24kh0Fd86J9SD6gfqSRMqc3el66sEWax0EHsIHQ7WHpSDR2S3NuZWZewz7OZCBhInLkwwp0dKMxvR"/>
-<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-xs">
-          4K UHD
-        </span>
-</div>
-<div class="flex-1 min-w-0 flex flex-col justify-center">
-<div class="flex items-center gap-1 mb-0.5">
-<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase font-bold">Multiplexing</span>
-</div>
-<h2 class="font-title-sm text-title-sm text-on-surface truncate">4K Nature Wildlife Documentary</h2>
-<p class="font-body-sm text-body-sm text-primary flex items-center gap-1 truncate">
-<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-          Analyzing audio stream...
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col justify-between select-none">
+
+  <!-- Top App Bar -->
+  <header class="w-full bg-slate-100/90 backdrop-blur-md pt-safe px-5 py-3 sticky top-0 z-30">
+    <div class="flex items-center justify-between h-12">
+      <!-- App Identity -->
+      <div class="flex items-center gap-3">
+        <img src="../images/logo.png" onerror="this.style.display='none'" class="w-9 h-9 rounded-full object-cover shadow-sm bg-white" alt=""/>
+        <h1 class="text-xl font-bold tracking-tight text-slate-900">
+          Library
+        </h1>
+      </div>
+
+      <!-- Settings / Refresh Icon -->
+      <div class="flex items-center gap-1">
+        <button id="btn-refresh" type="button" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[22px]">refresh</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Tasks List -->
+  <main class="flex-1 px-4 py-2 flex flex-col gap-4 max-w-lg mx-auto w-full pb-24">
+
+    <!-- Segmented Capsule (Active vs Completed) -->
+    <div class="w-full bg-slate-200/80 p-1 rounded-2xl flex items-center justify-between text-xs font-semibold">
+      <button id="tab-active" class="flex-1 py-2 px-3 rounded-xl bg-white text-sky-800 shadow-sm flex items-center justify-center gap-1.5 transition-all">
+        <span class="material-symbols-outlined text-[16px]">downloading</span>
+        <span>Downloading</span>
+        <span id="badge-active" class="px-1.5 py-0.2 bg-sky-100 text-sky-800 rounded-full text-[10px]">0</span>
+      </button>
+
+      <button id="tab-completed" class="flex-1 py-2 px-3 rounded-xl text-slate-500 hover:text-slate-800 flex items-center justify-center gap-1.5 transition-all">
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+        <span>Completed</span>
+        <span id="badge-completed" class="px-1.5 py-0.2 bg-slate-300 text-slate-700 rounded-full text-[10px]">0</span>
+      </button>
+    </div>
+
+    <!-- Active Tasks Container -->
+    <div id="tasks-container" class="flex flex-col gap-3">
+      <!-- Populated dynamically -->
+      <div id="empty-state" class="bg-white rounded-3xl p-8 border border-slate-200 text-center flex flex-col items-center justify-center gap-2 mt-4 shadow-sm">
+        <span class="material-symbols-outlined text-slate-300 text-[40px]">downloading</span>
+        <span class="text-sm font-semibold text-slate-600">No downloads right now</span>
+        <p class="text-xs text-slate-400 max-w-[220px]">
+          Copy any video link and tap Download on the Capture tab to start.
         </p>
-</div>
-</div>
-<!-- Live Telemetry Row -->
-<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-<div class="flex items-center gap-1.5">
-<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px] text-primary">download</span> 4.1 MB/s
-        </span>
-<span class="text-on-surface-variant font-label-sm text-label-sm">Connecting chunk 3/24</span>
-</div>
-<span class="font-label-sm text-label-sm text-outline">180 MB / 1.4 GB</span>
-</div>
-<!-- Multi-Gradient Bar -->
-<div class="w-full h-2 rounded-full bg-surface-dim overflow-hidden p-0.5">
-<div class="h-full rounded-full bg-gradient-to-r from-secondary to-primary-container transition-all duration-300" style="width: 12%;"></div>
-</div>
-<!-- Controls Row -->
-<div class="flex items-center justify-end gap-space-xs pt-1">
-<button aria-label="Pause stream" class="h-10 px-4 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1 transition-all active:scale-95">
-<span class="material-symbols-outlined text-[18px]">pause</span>
-<span>Pause</span>
-</button>
-<button aria-label="Cancel stream" class="h-10 w-10 rounded-full bg-surface-container text-on-surface-variant hover:text-error hover:bg-error-container hover:text-on-error-container flex items-center justify-center transition-all active:scale-90">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</div>
-<!-- Section Divider with Clean Material 3 Accent -->
-<div class="flex items-center justify-between pt-2">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
-<h3 class="font-title-md text-title-md text-on-surface">Recent Completed</h3>
-</div>
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Today (4)</span>
-</div>
-<!-- Completed Item Card with Integrated PiP Media Player Hub -->
-<div class="w-full bg-surface-container-low rounded-2xl p-4 shadow-sm flex flex-col space-y-3.5">
-<div class="flex gap-space-sm items-start">
-<!-- Media Thumbnail with Centered Play Button Action Overlay -->
-<div class="relative w-32 aspect-video rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm group cursor-pointer" onclick="togglePlayerToast()">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Retro synthwave sports car driving towards a vibrant magenta and indigo wireframe sunset horizon, 80s aesthetic digital art with crisp neon glows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJOZQn7YWja9V05pKbFsW-DYdWzF3OmQ2d6P4JAmu-DjI3gt7rh_MxEKRJbG4Ltgzwnp9IBOt87Wsx-VT-ggy0iRGTl6-TLecGUKCLPHauqBlMu4i6it_NeiVL0L2QSgrd0ni6fLlrMO2M7MA-k5gQWM2tRdnWd1vFZ3isfn0pFP19SQQwHsgGkVxRtEKt9xeNK9Qxnm8w6drvCr5UlOAstfqXdle5WhC4DJVLVMbR"/>
-<div class="absolute inset-0 bg-primary/25 backdrop-blur-[2px] flex items-center justify-center">
-<div class="w-10 h-10 rounded-full bg-surface/90 text-primary shadow-md flex items-center justify-center transform group-hover:scale-110 active:scale-90 transition-all">
-<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-full bg-inverse-surface/85 text-inverse-on-surface font-label-sm text-label-sm">
-          03:48
-        </span>
-</div>
-<!-- Title & Granular File Tagging Metadata -->
-<div class="flex-1 min-w-0 flex flex-col justify-between h-full">
-<div>
-<div class="flex items-center gap-1.5 mb-1">
-<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[12px]">verified</span> Stripped
-            </span>
-<span class="text-on-surface-variant font-label-sm text-label-sm">10m ago</span>
-</div>
-<h2 class="font-title-sm text-title-sm text-on-surface line-clamp-1">Synthwave Sunset - Retrowave Ride (Official MV)</h2>
-</div>
-<div class="flex flex-wrap gap-1.5 pt-1">
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">MP4</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">1080p 60fps</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">42 MB</span>
-</div>
-</div>
-</div>
-<!-- Quick Actions Row: Primary PiP Pill and Native Sharing -->
-<div class="flex items-center gap-2 pt-1">
-<!-- Prominent Pill Button: Play in PiP -->
-<button class="flex-1 h-12 px-4 rounded-full bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98]" onclick="togglePlayerToast()">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">picture_in_picture_alt</span>
-<span>Play in PiP</span>
-</button>
-<!-- Share via WhatsApp / Native Target -->
-<button aria-label="Share via WhatsApp" class="w-12 h-12 rounded-full bg-surface-container-high hover:bg-secondary-fixed text-on-surface flex items-center justify-center transition-all active:scale-90" title="Instant Share">
-<span class="material-symbols-outlined text-[22px] text-tertiary">share</span>
-</button>
-<!-- Overflow Options Menu Button -->
-<button aria-label="More options" class="w-12 h-12 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface flex items-center justify-center transition-all active:scale-90" title="File Details and Storage">
-<span class="material-symbols-outlined text-[22px]">more_vert</span>
-</button>
-</div>
-</div>
-<!-- Interactive Mock Toast / PiP Notification Container -->
-<div class="fixed bottom-20 left-4 right-4 z-40 bg-inverse-surface text-inverse-on-surface p-3.5 rounded-2xl shadow-xl flex items-center justify-between transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none" id="pip-toast">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[18px]">dock_to_bottom</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-label-md text-label-md text-inverse-on-surface truncate">PiP Mode Active</span>
-<span class="font-body-sm text-body-sm text-outline-variant truncate">Playing floating window in PolarSnap</span>
-</div>
-</div>
-<button class="p-2 text-inverse-on-surface/80 hover:text-inverse-on-surface" onclick="hidePlayerToast()">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</div>
-<script>
-  // Simple client-side micro-interactions
-  const tabDownloading = document.getElementById('tab-downloading');
-  const tabLibrary = document.getElementById('tab-library');
-  const pipToast = document.getElementById('pip-toast');
+        <button id="btn-go-capture" type="button" class="mt-2 px-4 py-2 bg-sky-700 hover:bg-sky-800 active:scale-95 text-white text-xs font-semibold rounded-full shadow-sm transition-all">
+          Go to Capture
+        </button>
+      </div>
+    </div>
 
-  if (tabDownloading && tabLibrary) {
-    tabDownloading.addEventListener('click', () => {
-      tabDownloading.className = 'flex-1 py-2.5 px-4 rounded-full bg-surface text-primary font-label-md text-label-md shadow-sm transition-all duration-200 flex items-center justify-center gap-space-xs';
-      tabLibrary.className = 'flex-1 py-2.5 px-4 rounded-full bg-transparent text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-200 flex items-center justify-center gap-space-xs';
-    });
+  </main>
 
-    tabLibrary.addEventListener('click', () => {
-      tabLibrary.className = 'flex-1 py-2.5 px-4 rounded-full bg-surface text-primary font-label-md text-label-md shadow-sm transition-all duration-200 flex items-center justify-center gap-space-xs';
-      tabDownloading.className = 'flex-1 py-2.5 px-4 rounded-full bg-transparent text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-200 flex items-center justify-center gap-space-xs';
-    });
-  }
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 w-full z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200 pb-safe">
+    <div class="h-16 px-6 flex items-center justify-around">
+      <button data-screen="home" class="nav-tab flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors">
+        <span class="material-symbols-outlined text-[22px]">bolt</span>
+        <span class="text-[11px]">Capture</span>
+      </button>
 
-  function togglePlayerToast() {
-    if (pipToast) {
-      pipToast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-      pipToast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
-      setTimeout(() => {
-        hidePlayerToast();
-      }, 4000);
-    }
-  }
+      <button data-screen="downloads" class="nav-tab flex flex-col items-center justify-center gap-1 text-sky-700 font-semibold transition-colors">
+        <span class="material-symbols-outlined text-[22px]">folder_zip</span>
+        <span class="text-[11px]">Library</span>
+      </button>
 
-  function hidePlayerToast() {
-    if (pipToast) {
-      pipToast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-      pipToast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-    }
-  }
-</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_16px_rgba(27,54,93,0.06)]" data-active-classes="text-primary font-label-md"><div class="h-16 px-margin flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[48px] h-12 gap-space-xs text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">bolt</span><span class="font-label-sm text-label-sm">Capture</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] h-12 gap-space-xs transition-colors text-primary font-label-md" data-path="downloads" href="#"><span class="material-symbols-outlined text-[24px]">folder_zip</span><span class="font-label-sm text-label-sm">Library</span></a><a class="flex flex-col items-center justify-center min-w-[48px] h-12 gap-space-xs text-on-surface-variant hover:text-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-sm text-label-sm">Engine</span></a></div></nav></body></html>
+      <button data-screen="settings" class="nav-tab flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors">
+        <span class="material-symbols-outlined text-[22px]">tune</span>
+        <span class="text-[11px]">Engine</span>
+      </button>
+    </div>
+  </nav>
+
+  <script>
+    (function () {
+      const tasksContainer = document.getElementById('tasks-container');
+      const emptyState = document.getElementById('empty-state');
+      const btnRefresh = document.getElementById('btn-refresh');
+      const btnGoCapture = document.getElementById('btn-go-capture');
+      const badgeActive = document.getElementById('badge-active');
+      const badgeCompleted = document.getElementById('badge-completed');
+
+      // Navigation
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const screen = tab.getAttribute('data-screen');
+          if (window.PolarSnap && window.PolarSnap.navigate) {
+            window.PolarSnap.navigate(screen);
+          }
+        });
+      });
+
+      if (btnGoCapture) {
+        btnGoCapture.addEventListener('click', () => {
+          if (window.PolarSnap && window.PolarSnap.navigate) {
+            window.PolarSnap.navigate('home');
+          }
+        });
+      }
+
+      function renderTasks() {
+        if (!window.PolarSnap || !window.PolarSnap.getTasksJson) {
+          return;
+        }
+
+        try {
+          const jsonStr = window.PolarSnap.getTasksJson();
+          const tasks = JSON.parse(jsonStr || "[]");
+
+          const active = tasks.filter(t => t.state === "DOWNLOADING" || t.state === "REMASTERING" || t.state === "QUEUED");
+          const completed = tasks.filter(t => t.state === "COMPLETED");
+
+          badgeActive.textContent = active.length;
+          badgeCompleted.textContent = completed.length;
+
+          if (tasks.length === 0) {
+            tasksContainer.innerHTML = '';
+            tasksContainer.appendChild(emptyState);
+            return;
+          }
+
+          tasksContainer.innerHTML = '';
+
+          tasks.forEach(task => {
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col gap-3";
+
+            const isDone = task.state === "COMPLETED";
+            const percent = Math.min(100, Math.max(0, task.progress || 0));
+
+            card.innerHTML = `
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-3 min-w-0">
+                  <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">${isDone ? 'check_circle' : 'movie'}</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <h3 class="text-xs font-bold text-slate-800 truncate">${task.title || 'Video Media'}</h3>
+                    <span class="text-[10px] text-slate-400 font-medium">${task.state}</span>
+                  </div>
+                </div>
+                ${!isDone ? `
+                  <button data-task-cancel="${task.id}" class="w-7 h-7 rounded-full text-slate-400 hover:text-red-500 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[16px]">close</span>
+                  </button>
+                ` : ''}
+              </div>
+
+              ${!isDone ? `
+                <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-sky-600 h-full rounded-full transition-all duration-300" style="width: ${percent}%;"></div>
+                </div>
+                <div class="flex items-center justify-between text-[10px] text-slate-400">
+                  <span>${percent}%</span>
+                  <span>${task.speed ? (task.speed / 1024 / 1024).toFixed(1) + ' MB/s' : ''}</span>
+                </div>
+              ` : `
+                <div class="text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">verified</span>
+                  <span>Saved to Gallery & Downloads</span>
+                </div>
+              `}
+            `;
+
+            const cancelBtn = card.querySelector(`[data-task-cancel="${task.id}"]`);
+            if (cancelBtn) {
+              cancelBtn.addEventListener('click', () => {
+                if (window.PolarSnap && window.PolarSnap.cancelTask) {
+                  window.PolarSnap.cancelTask(task.id);
+                  renderTasks();
+                }
+              });
+            }
+
+            tasksContainer.appendChild(card);
+          });
+
+        } catch (e) {
+          console.error("renderTasks error:", e);
+        }
+      }
+
+      // Initial render & poll every 2s
+      renderTasks();
+      setInterval(renderTasks, 2000);
+
+      if (btnRefresh) {
+        btnRefresh.addEventListener('click', renderTasks);
+      }
+    })();
+  </script>
+</body>
+</html>

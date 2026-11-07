@@ -124,60 +124,14 @@ class MainActivity : Activity() {
     private fun injectScriptHooks(view: WebView) {
         val js = """
             (function() {
-                // Wire navigation bar links
-                document.querySelectorAll('a[data-path]').forEach(function(el) {
-                    el.onclick = function(e) {
-                        e.preventDefault();
-                        var target = el.getAttribute('data-path');
-                        if (window.PolarSnap) {
+                document.querySelectorAll('[data-path], [data-screen]').forEach(function(el) {
+                    el.addEventListener('click', function(e) {
+                        var target = el.getAttribute('data-path') || el.getAttribute('data-screen');
+                        if (target && window.PolarSnap) {
                             window.PolarSnap.navigate(target);
                         }
-                    };
+                    });
                 });
-
-                // Wire Paste Button on Home
-                var pasteBtn = document.getElementById('paste-action-btn');
-                if (pasteBtn) {
-                    pasteBtn.onclick = function(e) {
-                        e.preventDefault();
-                        if (window.PolarSnap) {
-                            var text = window.PolarSnap.getClipboardText();
-                            var input = document.getElementById('url-input');
-                            if (input && text) {
-                                input.value = text;
-                            }
-                        }
-                    };
-                }
-
-                // Wire Main Download FAB on Home
-                var downloadFab = document.getElementById('main-download-fab');
-                if (downloadFab) {
-                    downloadFab.onclick = function(e) {
-                        e.preventDefault();
-                        var input = document.getElementById('url-input');
-                        var url = input ? input.value.trim() : '';
-                        if (!url) {
-                            if (window.PolarSnap) window.PolarSnap.showToast("Please enter or paste a video link");
-                            return;
-                        }
-                        var remasterToggle = document.getElementById('toggle-remaster');
-                        var isRemaster = remasterToggle ? remasterToggle.checked : true;
-                        if (window.PolarSnap) {
-                            window.PolarSnap.startDownload(url, "MP4", isRemaster, "NONE");
-                        }
-                    };
-                }
-
-                // Wire Quick Open link
-                var quickOpen = document.getElementById('quick-open-btn');
-                if (quickOpen) {
-                    quickOpen.onclick = function(e) {
-                        e.preventDefault();
-                        var pasteBtn = document.getElementById('paste-action-btn');
-                        if (pasteBtn) pasteBtn.click();
-                    };
-                }
             })();
         """.trimIndent()
         view.evaluateJavascript(js, null)
