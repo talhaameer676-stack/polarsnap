@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "npx tsx --test test/licensing.test.mjs"
+    "deploy": "wrangler deploy",
+    "d1:create": "wrangler d1 create polarsnap_licensing_db",
+    "d1:apply": "wrangler d1 execute polarsnap_licensing_db --file=./schema.sql"
   },
   "keywords": [
     "polarsnap",
@@ -19,6 +21,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "wrangler": "^3.114.17"
   }
 }

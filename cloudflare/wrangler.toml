@@ -17,7 +17,7 @@ OFFLINE_GRACE_PERIOD_SEC = 604800 # 7 days (7 * 24 * 3600)
 [[d1_databases]]
 binding = "DB"
 database_name = "polarsnap_licensing_db"
-database_id = "00000000-0000-0000-0000-000000000000" # Local / dev fallback, replaced during production deployment
+database_id = "7f60c2ce-f29a-45b3-ab69-c90206b38f29"
 migrations_dir = "./migrations"
 
 # Observability and logs
